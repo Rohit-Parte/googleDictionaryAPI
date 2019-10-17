@@ -6,9 +6,18 @@ Google does not provide API for Google Dictionary so I created one.
 
 To use, pass the query string with parameter `define` equal to the word you want to get the meaning of.
 
-Eg. `/?define=hello`, will give you the Google dictionary definition of **hello**:
+Eg.
 
-```json
+npm i google-dictionary-api --save
+
+var googleDictionaryApi = require("google-dictionary-api")
+
+googleDictionaryApi.search("price", "en")
+   .then(result=>{
+     console.log(result)
+    })
+
+--Response JSON
 [
   {
     "word": "hello",
